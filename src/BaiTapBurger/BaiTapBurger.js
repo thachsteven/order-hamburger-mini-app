@@ -9,7 +9,6 @@ export default class BaiTapBurger extends Component {
       <div className="container">
         <div className="row">
           <div className="col-6  text-center">
-            <h2 className="text-success">Bài tập Burger CyberSoft</h2>
             <Burger />
           </div>
           <div className="col-6">
