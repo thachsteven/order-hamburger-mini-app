@@ -1,7 +1,7 @@
 const burgerState = {
-  burger: { salad: 1, cheese: 1, beef: 1 }, // [{name:'salad',amount:1},{name:'c heese',amount:1},{name:'beef',amount:1}]
+  burger: { Salad: 1, Cheese: 1, Beef: 1 }, // [{name:'salad',amount:1},{name:'c heese',amount:1},{name:'beef',amount:1}]
 
-  menu: { salad: 10, cheese: 20, beef: 55 },
+  menu: { Salad: 10, Cheese: 20, Beef: 55 },
 
   total: 85,
 };

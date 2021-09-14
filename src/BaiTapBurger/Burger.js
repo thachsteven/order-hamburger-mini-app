@@ -18,7 +18,7 @@ class Burger extends Component {
   render() {
     return (
       <div>
-        <h3 className="text-danger font-weight-bold">Bánh Burger của bạn</h3>
+        <h3 className="text-danger font-weight-bold">Your Burger</h3>
         <div className="breadTop"></div>
         {this.renderBurgerItems()}
         <div className="breadBottom"></div>

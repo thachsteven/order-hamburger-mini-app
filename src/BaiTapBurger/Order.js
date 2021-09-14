@@ -11,25 +11,25 @@ class Order extends Component {
           <th>{propsMenu}</th>
           <th>
             <button
+              style={{ border: 'none', color: 'green', backgroundColor: 'transparent', fontSize: 20, outline: 'none' }}
               onClick={() => {
                 this.props.addBreadItems(propsMenu, 1);
               }}
-              className="btn btn-success"
             >
-              +
+              <i style={{ cursor: 'pointer' }} class="fa fa-plus-circle"></i>
             </button>
             {burger[propsMenu]}
             <button
+              style={{ border: 'none', color: 'red', backgroundColor: 'transparent', fontSize: 20, outline: 'none' }}
               onClick={() => {
                 this.props.addBreadItems(propsMenu, -1);
               }}
-              className="btn btn-danger"
             >
-              -
+              <i style={{ cursor: 'pointer' }} class="fa fa-minus-circle"></i>
             </button>
           </th>
-          <th>{price}</th>
-          <th>{burger[propsMenu] * price}</th>
+          <th>{price}$</th>
+          <th>{burger[propsMenu] * price}$</th>
         </tr>
       );
     });
@@ -38,22 +38,22 @@ class Order extends Component {
   render() {
     return (
       <div style={{ marginTop: '60px' }}>
-        <h4 className="text-success text-center font-weight-bold">Chọn thức ăn</h4>
+        <h4 className="text-success text-center font-weight-bold">Choose Food</h4>
         <table className="table">
           <thead>
             <tr>
-              <th>Thức ăn</th>
-              <th></th>
-              <th>Đơn giá</th>
-              <th>Thành tiền</th>
+              <th>Food</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
             </tr>
           </thead>
           <tbody>{this.renderMenu()}</tbody>
           <tfoot>
             <tr>
               <th colSpan="2"></th>
-              <th>Tổng cộng</th>
-              <th>{this.props.total}</th>
+              <th>Total:</th>
+              <th style={{ color: 'red' }}>{this.props.total}$</th>
             </tr>
           </tfoot>
         </table>
